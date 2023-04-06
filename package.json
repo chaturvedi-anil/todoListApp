@@ -1,0 +1,15 @@
+{
+  "name": "todolistapp",
+  "version": "1.0.0",
+  "description": "Todo list app ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anil Chaturvedi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
