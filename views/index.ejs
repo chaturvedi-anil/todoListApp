@@ -14,29 +14,19 @@
     <form action="/add-task" method="post">
         <div>
             <h3>DESCRIPTION</h3>
-            <input type="text" name="description-input" id="" placeholder="what you need to do?">
-        </div>
-        <hr>
-        <div>
-            <div>
-                <h3>CATEGORY</h3>
-                <select name="category" id="">
-                    <option value="">Choose a category</option>
-                    <option value="personal">Personal</option>
-                    <option value="work">Work</option>
-                    <option value="school">School</option>
-                    <option value="cleaning">Cleaning</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <h3>DUE DATE</h3>
-                <input type="date" name="due-date-input" id="">
-            </div>
-        </div>
-        <hr>
-    
-        <div class="button-container">
+            <input type="text" name="description" id="" placeholder="what you need to do?" required>
+            <hr>
+            <h3>CATEGORY</h3>
+            <select name="category" id="" required>
+                <option value="">Choose a category</option>
+                <option value="personal">Personal</option>
+                <option value="work">Work</option>
+                <option value="school">School</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="other">Other</option>
+            </select>
+            <h3>DUE DATE</h3>
+            <input type="date" name="dueDate" id="" required>
             <button type="submit">ADD TASK</button>
         </div>
         <hr>
