@@ -11,36 +11,36 @@
 <body>
     <h1>TODO LIST</h1>
     <hr>
-    <div>
-        <h3>DESCRIPTION</h3>
-        <input type="text" name="description-input" id="" placeholder="what you need to do?">
-    </div>
-
-    <hr>
-    <div>
+    <form action="/add-task" method="post">
         <div>
-            <h3>CATEGORY</h3>
-            <select name="category" id="">
-                <option value="">Choose a category</option>
-                <option value="personal">Personal</option>
-                <option value="work">Word</option>
-                <option value="school">Schoorl</option>
-                <option value="cleaning">Cleaning</option>
-                <option value="other">Other</option>
-            </select>
+            <h3>DESCRIPTION</h3>
+            <input type="text" name="description-input" id="" placeholder="what you need to do?">
         </div>
+        <hr>
         <div>
-            <h3>DUE DATE</h3>
-            <input type="date" name="due-date-input" id="">
+            <div>
+                <h3>CATEGORY</h3>
+                <select name="category" id="">
+                    <option value="">Choose a category</option>
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="school">School</option>
+                    <option value="cleaning">Cleaning</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <h3>DUE DATE</h3>
+                <input type="date" name="due-date-input" id="">
+            </div>
         </div>
-    </div>
-    <hr>
-
-    <div class="button-container">
-        <a href="/submit-task">ADD TASK</a>
-        <a href="/delete-task">DELETE TASK</a>
-    </div>
-    <hr>
+        <hr>
+    
+        <div class="button-container">
+            <button type="submit">ADD TASK</button>
+        </div>
+        <hr>
+    </form>
 
     <div>
         
