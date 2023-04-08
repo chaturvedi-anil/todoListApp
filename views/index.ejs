@@ -77,6 +77,8 @@
         
         function giveIdToDeleteBtn(id)
         {
+            document.getElementById('description-para').style.textDecoration="line-through";
+            document.getElementById('date-para').style.textDecoration="line-through";
             const deleteButton=document.getElementById('delete-anchor').href=`/delete-task/?id=${id}`;
             // console.log(deleteButton);
         }
