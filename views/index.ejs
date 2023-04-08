@@ -42,8 +42,8 @@
                     <button type="submit" id="addTask" class="btn">
                         <i class="fa-solid fa-plus"></i>  ADD TASK
                     </button>
-                    <button type="button" id="deleteTask" class="btn">
-                        <a href="/delete-task"><i class="fa-solid fa-trash-can"></i>  DELETE TASK</a>
+                    <button type="button" id="deleteTask" class="btn btnId">
+                        <a href="/delete-task" id="delete-anchor"><i class="fa-solid fa-trash-can"></i>  DELETE TASK</a>
                     </button>
                 </div>
             </div>
@@ -74,9 +74,11 @@
     </main>
 
     <script>
+        
         function giveIdToDeleteBtn(id)
         {
-            console.log(id);
+            const deleteButton=document.getElementById('delete-anchor').href=`/delete-task/?id=${id}`;
+            // console.log(deleteButton);
         }
     </script>
 

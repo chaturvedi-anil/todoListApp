@@ -53,6 +53,25 @@ app.post('/add-task', function(req, res)
     });
 });
 
+app.get('/delete-task/', function(req, res)
+{   
+    // geting id 
+    let id=req.query.id;
+    console.log('inside delete : ',id);
+    
+
+    Todo.findByIdAndDelete({_id:id})
+    .then(() =>
+    {
+        console.log('Task deleted');
+        return res.redirect('back');
+    })
+    .catch((err) =>
+    {
+        console.log('error in deleting contact', err);
+        return;
+    });
+});
 
 
 
