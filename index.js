@@ -16,6 +16,7 @@ app.use(express.urlencoded());
 // setting static file
 app.use(express.static('./assets'));
 
+
 //<------------------------Controller---------------------------->
 
 app.get('/',function(req, res)
@@ -57,13 +58,11 @@ app.get('/delete-task/', function(req, res)
 {   
     // geting id 
     let id=req.query.id;
-    console.log('inside delete : ',id);
     
-
     Todo.findByIdAndDelete({_id:id})
     .then(() =>
     {
-        console.log('Task deleted');
+        // console.log('Task deleted');
         return res.redirect('back');
     })
     .catch((err) =>
