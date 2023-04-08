@@ -6,36 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO LIST</title>
 
+    <!-- Font Awesome Cdn Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Css -->
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-    <h1>TODO LIST</h1>
-    <hr>
-    <form action="/add-task" method="post">
-        <div>
-            <h3>DESCRIPTION</h3>
-            <input type="text" name="description" id="" placeholder="what you need to do?" required>
-            <hr>
-            <h3>CATEGORY</h3>
-            <select name="category" id="" required>
-                <option value="">Choose a category</option>
-                <option value="personal">Personal</option>
-                <option value="work">Work</option>
-                <option value="school">School</option>
-                <option value="cleaning">Cleaning</option>
-                <option value="other">Other</option>
-            </select>
-            <h3>DUE DATE</h3>
-            <input type="date" name="dueDate" id="" required>
-            <button type="submit">ADD TASK</button>
-        </div>
+    <main id="main-container">
+        <h1 class="heading">TODO App</h1>
         <hr>
-    </form>
+        <form action="/add-task" method="post">
+            <div id="form-container">
+                <div id="description">
+                    <h4>DESCRIPTION</h4>
+                    <input type="text" name="description" class="no-outline" placeholder="what you need to do?" required>
+                </div>
+                <div id="date-category-container">
+                    <div id="category">
+                        <h4>CATEGORY</h4>
+                        <select name="category" class="no-outline" required>
+                            <option value="">Choose a category</option>
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="cleaning">Cleaning</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div id="due-date">
+                        <h4>DUE DATE</h4>
+                        <input type="date" name="dueDate" class="no-outline" required>
+                    </div>
+                </div>
+                <div id="btn-container">
+                    <button type="submit" id="addTask" class="btn">
+                        <i class="fa-solid fa-plus"></i>  ADD TASK
+                    </button>
+                    <button type="button" id="deleteTask" class="btn">
+                        <i class="fa-solid fa-trash-can"></i>  DELETE TASK
+                    </button>
+                </div>
+            </div>
+            
+        </form>
+        <hr>
+        <div id="task-list">
+            <div id="task">
+                <div id="task-container">
+                    <div id="content">
+                        <input type="checkbox" name="task" id="">
+                        <p>why not add task ?</p>
+                        <p><i class="fas fa-calendar-days"></i> May 09, 2022</p>
+                    </div>
+                    <div id="category-btn">
+                        <button name="">category</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    <div>
-        
-    </div>
-
-    <script src="/js/index.js"></script>
+    <script src="/javascript/index.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ app.set('views', './views');
 // setting body parser
 app.use(express.urlencoded());
 // setting static file
-app.use(express.static('assets'));
+app.use(express.static('./assets'));
 
 //<------------------------Controller---------------------------->
 

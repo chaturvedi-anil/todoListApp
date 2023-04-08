@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+#main-container
+{
+    margin-top: 0;
+    width: 50%;
+    background:white;
+    color:gray;
+}
+#main-container h1
+{
+    text-align: center;
+}
+
+#form-container
+{
+    margin-bottom: 1rem;
+    line-height: 1px;
+}
+
+#description
+{
+    margin: 0 1rem;
+}
+#description input
+{
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    width: 95%;
+    margin-top: -8px;
+    margin-bottom: 1rem;
+    color: grey;
+}
+
+
+
+/* category */
+#date-category-container
+{
+    display: flex;
+    width: 50vw;
+}
+#date-category-container div
+{
+    border: 1px solid black;
+    border-left: none !important;
+    width: 25vw;
+    padding: 0 1rem 1rem;
+}
+#category select
+{
+    width: 80%;
+    font-size: 1rem;
+    color: grey;
+    border: none;
+}
+#due-date
+{
+    border-right: none !important;
+}
+#due-date input
+{
+    border: none;
+    font-size: 1rem;
+    color: grey;
+}
+/* button conainer */
+#btn-container
+{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+.btn
+{
+    width: 25%;
+    font-size: 1.2rem;
+    padding: 1rem 0.1rem;
+    margin: 0 2px;
+    border: none;
+}
+#addTask
+{
+   background-color: rgb(32, 31, 31);
+   color: white;
+}
+#deleteTask
+{
+    background-color: red;
+    color: white;
+}
+.btn:hover
+{
+    cursor: pointer;
+}
+
+
+/* task list */
+
+#task-container
+{
+    display: flex;
+    width: 50vw;
+    align-items: center;
+}
+#task-container > div
+{
+    padding: 0 1rem 1rem;
+}
+#content
+{
+    width: 40vw;
+}
+#content >p
+{
+    display: inline-block;
+}
+#category-btn
+{
+    width: 10vw;
+}
+
+
+
+/* commone style */
+.no-outline:focus
+{
+    outline: none;
+}
