@@ -95,6 +95,10 @@ body{
 #deleteTask
 {
     background-color: red;
+}
+#deleteTask > a
+{
+    text-decoration: none;
     color: white;
 }
 .btn:hover
@@ -115,19 +119,46 @@ body{
 {
     padding: 0 1rem 1rem;
 }
+#checkbox-btn > input.check-box
+{
+    width: 1.2rem;
+    height: 1.8rem;
+}
 #content
 {
     width: 40vw;
+    line-height: 0.1;
+
 }
-#content >p
+#content > #description-para
 {
     display: inline-block;
+    text-transform: capitalize;
+    margin-bottom: -5px;
+}
+#content > #date-para
+{
+    color: rgb(168, 165, 165);
 }
 #category-btn
 {
     width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+#category-btn > button
+{
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.5rem 0.1rem;
+    margin: 0 2px;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
 
 
 /* commone style */

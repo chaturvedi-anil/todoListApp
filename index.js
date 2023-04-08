@@ -20,7 +20,18 @@ app.use(express.static('./assets'));
 
 app.get('/',function(req, res)
 {
-    return res.render('index');
+    Todo.find({})
+    .then((tasks)=>
+    {
+        return res.render('index',{
+            task_list: tasks
+        });
+    })
+    .catch((err) =>
+    {
+        console.log(`error in fetching task from db : ${err}`);
+        return;
+    });
 });
 
 // addting task
@@ -41,6 +52,7 @@ app.post('/add-task', function(req, res)
         return;
     });
 });
+
 
 
 
