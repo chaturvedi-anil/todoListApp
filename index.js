@@ -56,7 +56,7 @@ app.post('/add-task', function(req, res)
 
 app.get('/delete-task/', function(req, res)
 {   
-    // geting id 
+    // geting object id of task
     let id=req.query.id;
     
     Todo.findByIdAndDelete({_id:id})

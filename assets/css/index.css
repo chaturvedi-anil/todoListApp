@@ -4,7 +4,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #main-container
@@ -46,18 +46,18 @@ body{
 #date-category-container
 {
     display: flex;
-    width: 50vw;
+    min-width: 100%;
 }
 #date-category-container div
 {
     border: 1px solid black;
     border-left: none !important;
-    width: 25vw;
+    width: 50%;
     padding: 0 1rem 1rem;
 }
 #category select
 {
-    width: 80%;
+    width: 70%;
     font-size: 1rem;
     color: grey;
     border: none;
@@ -112,7 +112,7 @@ body{
 #task-container
 {
     display: flex;
-    width: 50vw;
+    width: 100%;
     align-items: center;
 }
 #task-container > div
@@ -126,7 +126,7 @@ body{
 }
 #content
 {
-    width: 40vw;
+    width: 90%;
     line-height: 0.1;
 
 }
@@ -142,7 +142,7 @@ body{
 }
 #category-btn
 {
-    width: 10vw;
+    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +154,6 @@ body{
     padding: 0.5rem 0.1rem;
     margin: 0 2px;
     border: none;
-    background-color: green;
     color: white;
     border-radius: 2px;
     text-transform: uppercase;
@@ -165,4 +164,31 @@ body{
 .no-outline:focus
 {
     outline: none;
+}
+.bg-green
+{
+    background-color: green;
+}
+.bg-orange
+{
+    background-color: orange;
+}
+.bg-royalblue
+{
+    background-color: royalblue;
+}
+.bg-purple
+{
+    background-color: purple;
+}
+.bg-red
+{
+    background-color: red;
+}
+
+/* media query */
+
+
+@media screen  {
+    
 }

@@ -13,7 +13,7 @@
 </head>
 <body>
     <main id="main-container">
-        <h1 class="heading">TODO App</h1>
+        <h1 class="heading">TODO LIST APP</h1>
         <hr>
         <form action="/add-task" method="post">
             <div id="form-container">
@@ -42,7 +42,7 @@
                     <button type="submit" id="addTask" class="btn">
                         <i class="fa-solid fa-plus"></i>  ADD TASK
                     </button>
-                    <button type="button" id="deleteTask" class="btn btnId">
+                    <button type="button" id="deleteTask" class="btn btnId" >
                         <a href="/delete-task" id="delete-anchor"><i class="fa-solid fa-trash-can"></i>  DELETE TASK</a>
                     </button>
                 </div>
@@ -54,7 +54,7 @@
             <% for(let i of task_list){ %>
                 <div id="task-container">
                     <div id="checkbox-btn">
-                        <input type="checkbox" name="task" class="check-box" id="" onclick="giveIdToDeleteBtn(`<%=i._id%>`)">
+                        <input type="checkbox" name="task" class="check-box" id="checkBox" onchange="giveIdToDeleteBtn(`<%=i._id%>`, this)">
                     </div>
                     <div id="content">
                         <h4 id="description-para">
@@ -65,25 +65,31 @@
                         </p>
                     </div>
                     <div id="category-btn">
-                        <button name=""><%= i.category %></button>
+                        <!-- ejs code for runtime color changing -->
+                        <% switch(i.category) {
+                            case 'personal':%>
+                                <button name="" class="bg-green"><%= i.category %></button>
+                                <%  break;
+                            case 'work':%>
+                                <button name="" class="bg-orange"><%= i.category %></button>
+                                <% break;
+                            case 'school':%>
+                                <button name="" class="bg-royalblue"><%= i.category %></button>
+                                <% break;
+                            case 'cleaning':%>
+                                <button name="" class="bg-purple"><%= i.category %></button>
+                                <% break;
+                            default: %>
+                                <button name="" class="bg-red"><%= i.category %></button>
+                                <% break; 
+                         } %>
                     </div>
                 </div>
                 <hr>
             <% } %>
         </div>
     </main>
-
-    <script>
-        
-        function giveIdToDeleteBtn(id)
-        {
-            document.getElementById('description-para').style.textDecoration="line-through";
-            document.getElementById('date-para').style.textDecoration="line-through";
-            const deleteButton=document.getElementById('delete-anchor').href=`/delete-task/?id=${id}`;
-            // console.log(deleteButton);
-        }
-    </script>
-
+    
     <script src="/javascript/index.js"></script>
 </body>
 </html>
