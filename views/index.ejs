@@ -53,9 +53,11 @@
         <div id="task-list">
             <% for(let i of task_list){ %>
                 <div id="task-container">
+
                     <div id="checkbox-btn">
                         <input type="checkbox" name="task" class="check-box" id="checkBox" onchange="giveIdToDeleteBtn(`<%=i._id%>`, this)">
                     </div>
+
                     <div id="content">
                         <h4 id="description-para">
                             <%= i.description %>
@@ -64,6 +66,7 @@
                             <i class="fas fa-calendar-days"></i> <%= i.dueDate %>
                         </p>
                     </div>
+
                     <div id="category-btn">
                         <!-- ejs code for runtime color changing -->
                         <% switch(i.category) {
