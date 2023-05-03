@@ -57,7 +57,6 @@ body{
 }
 #category select
 {
-    width: 70%;
     font-size: 1rem;
     color: grey;
     border: none;
@@ -72,6 +71,7 @@ body{
     font-size: 1rem;
     color: grey;
 }
+
 /* button conainer */
 #btn-container
 {
@@ -127,7 +127,7 @@ body{
 #content
 {
     width: 90%;
-    line-height: 0.1;
+    line-height: 0.5;
 
 }
 #content > #description-para
