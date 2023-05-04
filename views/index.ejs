@@ -52,16 +52,18 @@
         </form>
         <hr>
         <div id="task-list">
+            <% let count=0; %>
             <% for(let i of task_list){ %>
+                <% count++; %>
                 <div id="task-container">
                     <div id="checkbox-btn">
-                        <input type="checkbox" name="task" class="check-box" id="checkBox" onchange="giveIdToDeleteBtn(`<%=i._id%>`, this)">
+                        <input type="checkbox" name="task" class="check-box" id="checkBox" onclick="giveIdToDeleteBtn(`<%=i._id%>`, this, `description-para-<%= count %>`, `date-para-<%= count %>`)">
                     </div>
                     <div id="content">
-                        <h4 id="description-para">
+                        <h4 id="description-para-<%= count %>">
                             <%= i.description %>
                         </h4>
-                        <p id="date-para">
+                        <p id="date-para-<%= count %>">
                             <i class="fas fa-calendar-days"></i> <%= i.dueDate %>
                         </p>
                     </div>
@@ -90,7 +92,6 @@
             <% } %>
         </div>
     </main>
-    
     <script src="/javascript/index.js"></script>
 </body>
 </html>
